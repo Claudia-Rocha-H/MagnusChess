@@ -1,0 +1,1 @@
+add_custom_target(chess_engine_tests_placeholder)
