@@ -1,6 +1,20 @@
-#include <iostream>
+#include <QGuiApplication>
+#include <QQmlApplicationEngine>
 
-int main() {
-    std::cout << "ChessEngine scaffold is running." << std::endl;
-    return 0;
+int main(int argc, char* argv[]) {
+    QGuiApplication app(argc, argv);
+
+    QQmlApplicationEngine engine;
+    const QUrl mainUrl(QStringLiteral("qrc:/Main.qml"));
+
+    QObject::connect(
+        &engine,
+        &QQmlApplicationEngine::objectCreationFailed,
+        &app,
+        []() { QCoreApplication::exit(-1); },
+        Qt::QueuedConnection
+    );
+
+    engine.load(mainUrl);
+    return app.exec();
 }

@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Main.qml</file>
+        <file>ChessBoard.qml</file>
+        <file>BoardState.qml</file>
+        <file>FenParser.js</file>
+    </qresource>
+</RCC>

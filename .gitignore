@@ -10,12 +10,21 @@ CTestTestfile.cmake
 cmake_install.cmake
 Makefile
 compile_commands.json
+build.ninja
+.ninja_deps
+.ninja_log
 
 # IDE/editor
-.vscode/
 .idea/
 *.swp
 *.swo
+*.user
+*.VC.db
+*.VC.opendb
+
+# Keep shared tasks, ignore other local VS Code files
+.vscode/*
+!.vscode/tasks.json
 
 # OS files
 .DS_Store
